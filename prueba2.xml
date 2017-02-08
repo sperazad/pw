@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:importacion xmlns:p="http://www.capsis.org/importacion_template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.capsis.org/importacion_template importFiliacion.xsd ">
+    <p:importacionCentros><!--Contiene la información de todos los centros de la empresa, junto con sus espacios físicos.-->
+        <p:centro op="actualizar">
+            <p:codigo>03501731</p:codigo>
+            <p:nombre>Edificio Judicial Puerto del Rosario</p:nombre>
+            <p:domicilio op="actualizar">
+                <p:calle>Secundino Alonso</p:calle>
+                <p:num-calle>20</p:num-calle>
+                <p:portal></p:portal>
+                <p:bloque></p:bloque>
+                <p:escalera></p:escalera>
+                <p:piso></p:piso>
+                <p:puerta></p:puerta>
+                <p:codPostal></p:codPostal>
+                <p:telf></p:telf>
+                <p:tipo-calle>CL</p:tipo-calle>
+                <p:cod-provincia>35</p:cod-provincia>
+                <p:provincia-txt>Las Palmas</p:provincia-txt>
+                <p:poblacion-txt>Puerto del Rosario</p:poblacion-txt>
+                <p:descripcion></p:descripcion>
+            </p:domicilio>
+            <p:espacios-fisicos>
+            </p:espacios-fisicos>
+        </p:centro>
+    </p:importacionCentros>
+    <p:importacionEmpresas><!--Contiene la información de todas las empresas, junto con sus unidades organizativas.-->
+        <p:empresa op="actualizar">
+            <p:codigo>110</p:codigo>
+            <p:razon-social>Gobierno de canarias </p:razon-social>
+            <p:codigo-externo></p:codigo-externo>
+            <p:nombre-comercial></p:nombre-comercial>
+            <p:den-abreviada></p:den-abreviada>
+            <p:anyo-constitucion>0</p:anyo-constitucion>
+            <p:observaciones></p:observaciones>
+            <p:datos-empresa>
+                <p:cif>S3511001D</p:cif>
+                <p:ccc></p:ccc>
+                <p:forma-juridica>SL</p:forma-juridica>
+                <p:cod-cnae></p:cod-cnae>
+            </p:datos-empresa>
+            <p:centros-trabajo>
+                <p:centro-empresa op="actualizar">
+                    <p:codigoCentro>03501731</p:codigoCentro>
+                    <p:nombreCentro>Edificio Judicial Puerto del Rosario</p:nombreCentro>
+                    <p:codigoEmpresa>110</p:codigoEmpresa>
+                    <p:nombreEmpresa>Gobierno de canarias </p:nombreEmpresa>
+                </p:centro-empresa>
+            </p:centros-trabajo>
+        <p:unidades-organizativas>
+                <p:unidad-organizativa op="actualizar">
+                    <p:codigoEmpresa>110</p:codigoEmpresa>
+                    <p:codigo>357440</p:codigo>
+                    <p:codUnidadPadre></p:codUnidadPadre>
+                    <p:nombre>C. AGRICULTURA, GANADERÍA, PESCA Y AGUAS</p:nombre>
+                    <p:centros-unidad>
+                        <p:centro-unidad op="actualizar">
+                            <p:codEmpresa>110</p:codEmpresa>
+                            <p:codUnidadOrg>357440</p:codUnidadOrg>
+                            <p:codigo>03501731</p:codigo>
+                            <p:nombre>Edificio Judicial Puerto del Rosario</p:nombre>
+                        </p:centro-unidad>
+                    </p:centros-unidad>
+                    <p:unidades-hijas></p:unidades-hijas>
+                </p:unidad-organizativa>
+            </p:unidades-organizativas>
+        </p:empresa>
+    </p:importacionEmpresas>
+    <p:importacionPuestosTrabajo><!--Contiene la información de todos los puestos de trabajo, junto a que unidad organizativa pertenece y los espacios físicos que le afectan.-->
+        <p:puesto-trabajo op="actualizar">
+            <p:codigo>7</p:codigo>
+            <p:nombre>Tramitación Procesal Y Administrativa</p:nombre>
+            <p:comentario></p:comentario>
+            <p:codEmpresa></p:codEmpresa>
+            <p:codUnidadOrg></p:codUnidadOrg>
+            <p:espacios-fisicos>
+            </p:espacios-fisicos>
+        </p:puesto-trabajo>
+    </p:importacionPuestosTrabajo>
+    <p:importacionTrabajadores><!--Contiene la información de todos los trabajadores, junto con su asociación a sus empresas y sus puestos de trabajo.-->
+        <p:trabajador op="actualizar">
+            <p:codigo>123456</p:codigo>
+            <p:apellido1>ANTONIO</p:apellido1>
+            <p:apellido2>BENITO</p:apellido2>
+            <p:nombre>M. PILAR DE</p:nombre>
+            <p:telefono></p:telefono>
+            <p:movil></p:movil>
+            <p:fax></p:fax>
+            <p:email></p:email>
+            <p:observaciones></p:observaciones>
+            <p:tipo-documento>NIF</p:tipo-documento>
+            <p:num-documento>00381763D</p:num-documento>
+            <p:sexo>hombre</p:sexo>
+            <p:fecha-nacimiento>1956-04-04</p:fecha-nacimiento>
+            <p:localidad-nacimiento></p:localidad-nacimiento>
+            <p:sensibilidad-especial>false</p:sensibilidad-especial>
+            <p:formacion></p:formacion>
+            <p:empresas>
+                <p:trabajador-empresa op="actualizar">
+                    <p:codTrabajador>123456</p:codTrabajador>
+                    <p:codEmpresa>110</p:codEmpresa>
+                    <p:fechaInicio>2007-03-01</p:fechaInicio>
+                </p:trabajador-empresa>            </p:empresas>
+            <p:puestos-trabajo>
+                <p:trabajador-puesto-trabajo op="actualizar">
+                    <p:codigoTrabajador>123456</p:codigoTrabajador>
+                    <p:codigoEmpresa>110</p:codigoEmpresa>
+                    <p:codigoPuesto>8</p:codigoPuesto>
+                    <p:fechaInicio>2013-12-11</p:fechaInicio>
+                    <p:codMotivoAsignacion>0</p:codMotivoAsignacion>
+                </p:trabajador-puesto-trabajo>
+            </p:puestos-trabajo>
+            <p:centro-trabajo>
+                <p:codigo>03803160</p:codigo>
+                <p:nombre>Juzgado Paz Los Realejos</p:nombre>
+            </p:centro-trabajo>
+        </p:trabajador>
+    </p:importacionTrabajadores>
+</p:importacion>
+
