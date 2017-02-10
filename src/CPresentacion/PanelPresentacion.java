@@ -23,7 +23,7 @@ public class PanelPresentacion extends javax.swing.JFrame {
     //String pathSalida = "C:\\Users\\tnfuser11\\Desktop\\Compartido MV\\prueba2.xml";
     
     // MIG_JUS
-    String pathEntrada = "C:\\Users\\tnfuser11\\My Cloud\\MHP ownCloud\\05 PROYECTOS NetBeans\\Migración PW\\MIG_JUS_v1.xlsx";
+    String pathEntrada = "C:\\Users\\tnfuser11\\My Cloud\\MHP ownCloud\\05 PROYECTOS NetBeans\\pw\\MIG_JUS_v1.xlsx";
     String pathSalida = "C:\\Users\\tnfuser11\\Desktop\\Compartido MV\\MIG_JUS_v1.xml";
     
     /**

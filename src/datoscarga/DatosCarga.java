@@ -393,14 +393,14 @@ public class DatosCarga {
         ArrayList<Centros> listaCentros = getListaCentros();
         xml += "    <p:importacionCentros><!--Contiene la información de todos los centros de la empresa, junto con sus espacios físicos.-->\r\n";
         for (int i = 0; i < listaCentros.size(); i++) {
-//            xml += "        <p:centro op=\"actualizar\">\r\n"
-//                + "            <p:codigo>" + listaCentros.get(i).getCodigoCentro() + "</p:codigo>\r\n"
-//                + "            <p:nombre>" + listaCentros.get(i).getNombreCentro() + "</p:nombre>\r\n"
-//                + "            <p:comentario>" + listaCentros.get(i).getComentario() + "</p:comentario>\r\n"
-//                //+ XmlDomicilio(listaCentros.get(i).getDomicilio())
-//                + "            <p:espacios-fisicos>\r\n"
-//                + "            </p:espacios-fisicos>\r\n"
-//                + "        </p:centro>\r\n";
+            xml += "        <p:centro op=\"actualizar\">\r\n"
+                + "            <p:codigo>" + listaCentros.get(i).getCodigoCentro() + "</p:codigo>\r\n"
+                + "            <p:nombre>" + listaCentros.get(i).getNombreCentro() + "</p:nombre>\r\n"
+                + "            <p:comentario>" + listaCentros.get(i).getComentario() + "</p:comentario>\r\n"
+                + XmlDomicilio(listaCentros.get(i).getDomicilio())
+                + "            <p:espacios-fisicos>\r\n"
+                + "            </p:espacios-fisicos>\r\n"
+                + "        </p:centro>\r\n";
         }  
         xml += "    </p:importacionCentros>\r\n";
         
@@ -408,7 +408,7 @@ public class DatosCarga {
         ArrayList<Empresa> listaEmpresas = getListaEmpresas();
         xml += "    <p:importacionEmpresas><!--Contiene la información de todas las empresas, junto con sus unidades organizativas.-->\r\n";
         for (int i = 0; i < listaEmpresas.size(); i++) {
-        //    xml += XmlEmpresa(listaEmpresas.get(i));
+            xml += XmlEmpresa(listaEmpresas.get(i));
         }
         xml += "    </p:importacionEmpresas>\r\n";
 
@@ -442,17 +442,17 @@ public class DatosCarga {
     private String XmlDomicilio(Domicilio d) {
         String xml = "            <p:domicilio op=\"actualizar\">\r\n";
         xml +=       "                <p:calle>" + d.getCalle() + "</p:calle>\r\n";
-        xml +=       "                <p:num-calle>" + d.getNum_calle() + "</p:num-calle>\r\n";
-        xml +=       "                <p:portal>" + d.getPortal() + "</p:portal>\r\n";
-        xml +=       "                <p:bloque>" + d.getBloque()+ "</p:bloque>\r\n";
-        xml +=       "                <p:escalera>" + d.getEscalera() + "</p:escalera>\r\n";
-        xml +=       "                <p:piso>" + d.getPiso() + "</p:piso>\r\n";
-        xml +=       "                <p:puerta>" + d.getPuerta() + "</p:puerta>\r\n";
-        xml +=       "                <p:codPostal>" + d.getCodpostal() + "</p:codPostal>\r\n";
-        xml +=       "                <p:telf>" + d.getTelf() + "</p:telf>\r\n";
-        xml +=       "                <p:tipo-calle>"+ d.getTipo_calle() +"</p:tipo-calle>\r\n";
-        xml +=       "                <p:cod-provincia>" + d.getCod_provincia() + "</p:cod-provincia>\r\n";
-        xml +=       "                <p:provincia-txt>" + d.getProvincia_txt() + "</p:provincia-txt>\r\n";
+        xml += (d.getNum_calle().equals("")) ? "" : "                <p:num-calle>" + d.getNum_calle() + "</p:num-calle>\r\n";
+        xml += (d.getPortal().equals("")) ? "" : "                <p:portal>" + d.getPortal() + "</p:portal>\r\n";
+        xml += (d.getBloque().equals("")) ? "" : "                <p:bloque>" + d.getBloque()+ "</p:bloque>\r\n";
+        xml += (d.getEscalera().equals("")) ? "" : "                <p:escalera>" + d.getEscalera() + "</p:escalera>\r\n";
+        xml += (d.getPiso().equals("")) ? "" : "                <p:piso>" + d.getPiso() + "</p:piso>\r\n";
+        xml += (d.getPuerta().equals("")) ? "" : "                <p:puerta>" + d.getPuerta() + "</p:puerta>\r\n";
+        xml += "                <p:codPostal>" + d.getCodpostal() + "</p:codPostal>\r\n";
+        xml += (d.getTelf().equals("")) ? "" : "                <p:telf>" + d.getTelf() + "</p:telf>\r\n";
+        xml += (d.getTipo_calle().equals("")) ? "" : "                <p:tipo-calle>"+ d.getTipo_calle() +"</p:tipo-calle>\r\n";
+        xml += (d.getCod_provincia().equals("")) ? "" : "                <p:cod-provincia>" + d.getCod_provincia() + "</p:cod-provincia>\r\n";
+        xml += (d.getProvincia_txt().equals("")) ? "" : "                <p:provincia-txt>" + d.getProvincia_txt() + "</p:provincia-txt>\r\n"; 
                 /*+ "                <p:poblacion>\r\n" 
                 + "                    <p:codigo>" + d.getPoblacion().getCodigoPoblacion() + "</p:codigo>\r\n"
                 + "                    <p:nombre>" + d.getPoblacion().getNombrePoblacion() + "</p:nombre>\r\n" 
@@ -463,7 +463,7 @@ public class DatosCarga {
                 + "                    </p:municipio>\r\n" 
                 + "                </p:poblacion>\r\n"*/
         xml += (d.getPoblacion().getNombrePoblacion().equals("")) ? "" : "                <p:poblacion-txt>" + d.getPoblacion().getNombrePoblacion() + "</p:poblacion-txt>\r\n";
-        xml +=       "                <p:descripcion>" + d.getDescripcion() + "</p:descripcion>\r\n"    ;            
+        xml += (d.getDescripcion().equals("")) ? "" : "                <p:descripcion>" + d.getDescripcion() + "</p:descripcion>\r\n";               
         xml +=       "            </p:domicilio>\r\n";
         return xml;
     }
