@@ -133,7 +133,7 @@ public class DatosCarga {
             String nombrePoblacion = (lista.get(fila).get(17).toString() == null) ? "" : lista.get(fila).get(17).toString();
             String codMunicipio = (lista.get(fila).get(18).toString() == null) ? "" : lista.get(fila).get(18).toString();
             String nombreMunicipio = (lista.get(fila).get(19).toString() == null) ? "" : lista.get(fila).get(19).toString();
-
+            
             Centros centro = new Centros();
             centro.setCodigoCentro(codigoCentro);
             centro.setNombreCentro(nombreCentro);
@@ -158,7 +158,7 @@ public class DatosCarga {
             centro.getDomicilio().getPoblacion().setMunicipio(new Municipio());
             centro.getDomicilio().getPoblacion().getMunicipio().setCodigoMunicipio(codMunicipio);
             centro.getDomicilio().getPoblacion().getMunicipio().setNombreMunicipio(nombreMunicipio);
-
+            
             listaCentros.add(centro);
         }
         //}
@@ -228,12 +228,14 @@ public class DatosCarga {
            String codigo = (lista.get(fila).get(1).toString() == null)? "" : lista.get(fila).get(1).toString();
            String nombre = (lista.get(fila).get(2).toString() == null)? "" : lista.get(fila).get(2).toString(); 
            String codUnidadPadre = (lista.get(fila).get(3).toString() == null)? "" : lista.get(fila).get(3).toString();
-        
+           String comentario = (lista.get(fila).get(4).toString() == null)? "" : lista.get(fila).get(4).toString();
+           
            UnidadOrganizativa unidadOrg = new UnidadOrganizativa();
            unidadOrg.setCodigoEmpresa(codigoEmpresa);
            unidadOrg.setCodigo(codigo);
            unidadOrg.setNombre(nombre);
-           unidadOrg.setCodUnidadPadre(codUnidadPadre);  
+           unidadOrg.setCodUnidadPadre(codUnidadPadre); 
+           unidadOrg.setComentario(comentario);
            
            listaUO.add(unidadOrg);
         }
@@ -277,13 +279,13 @@ public class DatosCarga {
            String comentario = (lista.get(fila).get(2).toString() == null)? "" : lista.get(fila).get(2).toString();
            String codigoEmpresa = (lista.get(fila).get(3).toString() == null)? "" : lista.get(fila).get(3).toString();
            String codUnidadOrg = (lista.get(fila).get(4).toString() == null)? "" : lista.get(fila).get(4).toString();
-
+           
            PuestoTrabajo puesto = new PuestoTrabajo();
            puesto.setCodigoPuesto(codigoPuesto);
            puesto.setNombrePuesto(nombrePuesto);
            puesto.setComentario(comentario);
            puesto.setCodEmpresa(codigoEmpresa);
-           puesto.setCodUnidadOrg(codUnidadOrg);   
+           puesto.setCodUnidadOrg(codUnidadOrg);  
            
            listaPuestos.add(puesto);
         }
@@ -528,7 +530,8 @@ public class DatosCarga {
                      + "                    <p:codigoEmpresa>"+ unidadOrg.getCodigoEmpresa() +"</p:codigoEmpresa>\r\n" 
                      + "                    <p:codigo>"+ unidadOrg.getCodigo() +"</p:codigo>\r\n"
                      + "                    <p:codUnidadPadre>"+ unidadOrg.getCodUnidadPadre() +"</p:codUnidadPadre>\r\n" 
-                     + "                    <p:nombre>"+ unidadOrg.getNombre() +"</p:nombre>\r\n" 
+                     + "                    <p:nombre>"+ unidadOrg.getNombre() +"</p:nombre>\r\n"
+                     + "                    <p:comentario>" + unidadOrg.getComentario() + "</p:comentario>" 
                      + "                    <p:centros-unidad>\r\n"
                      +                          XmlUOCentro(codigoEmpresa, unidadOrg.getCodigo())
                      + "                    </p:centros-unidad>\r\n"
@@ -576,7 +579,7 @@ public class DatosCarga {
                     + "            <p:nombre>" + puesto.getNombrePuesto() + "</p:nombre>\r\n";
         xml += (puesto.getComentario().equals("")) ? "" : "            <p:comentario>" + puesto.getComentario() + "</p:comentario>\r\n";       
         xml +=        "            <p:codEmpresa>" + puesto.getCodEmpresa() + "</p:codEmpresa>\r\n" 
-                    + "            <p:codUnidadOrg>" + puesto.getCodUnidadOrg() + "</p:codUnidadOrg>\r\n" 
+                    + "            <p:codUnidadOrg>" + puesto.getCodUnidadOrg() + "</p:codUnidadOrg>\r\n"
                     + "            <p:espacios-fisicos>\r\n"                   
                     + "            </p:espacios-fisicos>\r\n" 
                     + "        </p:puesto-trabajo>\r\n";

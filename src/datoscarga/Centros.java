@@ -13,6 +13,7 @@ public class Centros {
     private String codigoCentro;
     private String nombreCentro;
     private String comentario;
+    private String tipoCentro;
     private Domicilio domicilio;
     
     public String getComentario() {
@@ -21,6 +22,14 @@ public class Centros {
 
     public void setComentario(String comentario) {
         this.comentario = comentario;
+    }
+    
+    public String getTipoCentro() {
+        return tipoCentro;
+    }
+
+    public void setTipoCentro(String TipoCentro) {
+        this.tipoCentro = tipoCentro;
     }
     
     public String getCodigoCentro() {

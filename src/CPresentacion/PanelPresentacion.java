@@ -23,8 +23,25 @@ public class PanelPresentacion extends javax.swing.JFrame {
     //String pathSalida = "C:\\Users\\tnfuser11\\Desktop\\Compartido MV\\prueba2.xml";
     
     // MIG_JUS
-    String pathEntrada = "C:\\Users\\tnfuser11\\My Cloud\\MHP ownCloud\\05 PROYECTOS NetBeans\\pw\\MIG_JUS_v1.xlsx";
-    String pathSalida = "C:\\Users\\tnfuser11\\Desktop\\Compartido MV\\MIG_JUS_v1.xml";
+    //String pathEntrada = "C:\\Users\\tnfuser11\\My Cloud\\MHP ownCloud\\05 PROYECTOS NetBeans\\pw\\MIG_JUS_v1.xlsx";
+    //String pathSalida = "C:\\Users\\tnfuser11\\Desktop\\Compartido MV\\MIG_JUS_v1.xml";
+    
+    
+    
+    // RUTAS JORGE
+    
+    // MIG_JUS
+    //String pathEntrada = "C:\\Users\\TNFUSER-07\\Documents\\pw\\MIG_JUS_v1.xlsx";
+    //String pathSalida = "C:\\Users\\TNFUSER-07\\Documents\\pw\\MIG_JUS_v1.xml";
+    
+    // MIG_ORG
+    //String pathEntrada = "C:\\Users\\TNFUSER-07\\Documents\\pw\\MIG_ORG_v1.xlsx";
+    //String pathSalida = "C:\\Users\\TNFUSER-07\\Documents\\pw\\MIG_ORG_v1.xml";
+    
+    // MIG_CONS
+    String pathEntrada = "C:\\Users\\TNFUSER-07\\Documents\\pw\\MIG_CONS_v1.xlsx";
+    String pathSalida = "C:\\Users\\TNFUSER-07\\Documents\\pw\\MIG_CONS_v1.xml";
+    
     
     /**
      * Creates new form PanelPresentacion
