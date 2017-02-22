@@ -531,7 +531,7 @@ public class DatosCarga {
                      + "                    <p:codigo>"+ unidadOrg.getCodigo() +"</p:codigo>\r\n"
                      + "                    <p:codUnidadPadre>"+ unidadOrg.getCodUnidadPadre() +"</p:codUnidadPadre>\r\n" 
                      + "                    <p:nombre>"+ unidadOrg.getNombre() +"</p:nombre>\r\n"
-                     + "                    <p:comentario>" + unidadOrg.getComentario() + "</p:comentario>" 
+                     + "                    <p:comentario>" + unidadOrg.getComentario() + "</p:comentario>\r\n" 
                      + "                    <p:centros-unidad>\r\n"
                      +                          XmlUOCentro(codigoEmpresa, unidadOrg.getCodigo())
                      + "                    </p:centros-unidad>\r\n"
