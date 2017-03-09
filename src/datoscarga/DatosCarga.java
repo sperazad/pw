@@ -399,7 +399,7 @@ public class DatosCarga {
                 + "            <p:codigo>" + listaCentros.get(i).getCodigoCentro() + "</p:codigo>\r\n"
                 + "            <p:nombre>" + listaCentros.get(i).getNombreCentro() + "</p:nombre>\r\n"
                 + "            <p:comentario>" + listaCentros.get(i).getComentario() + "</p:comentario>\r\n"
-                + XmlDomicilio(listaCentros.get(i).getDomicilio())
+                //+ XmlDomicilio(listaCentros.get(i).getDomicilio())
                 + "            <p:espacios-fisicos>\r\n"
                 + "            </p:espacios-fisicos>\r\n"
                 + "        </p:centro>\r\n";
