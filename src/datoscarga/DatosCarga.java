@@ -452,7 +452,7 @@ public class DatosCarga {
         xml += (d.getPuerta().equals("")) ? "" : "                <p:puerta>" + d.getPuerta() + "</p:puerta>\r\n";
         xml += "                <p:codPostal>" + d.getCodpostal() + "</p:codPostal>\r\n";
         xml += (d.getTelf().equals("")) ? "" : "                <p:telf>" + d.getTelf() + "</p:telf>\r\n";
-        xml += (d.getTipo_calle().equals("")) ? "" : "                <p:tipo-calle>"+ d.getTipo_calle() +"</p:tipo-calle>\r\n";
+        xml += "                <p:tipo-calle>" + d.getTipo_calle() + "</p:tipo-calle>\r\n";
         xml += (d.getCod_provincia().equals("")) ? "" : "                <p:cod-provincia>" + d.getCod_provincia() + "</p:cod-provincia>\r\n";
         xml += (d.getProvincia_txt().equals("")) ? "" : "                <p:provincia-txt>" + d.getProvincia_txt() + "</p:provincia-txt>\r\n"; 
                 /*+ "                <p:poblacion>\r\n" 
